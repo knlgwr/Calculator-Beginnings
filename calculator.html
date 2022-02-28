@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+            body {
+    font-family: Brush Script MT, Helvetica, sans-serif;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+input {
+    border-bottom: 2px solid black;
+    padding: 4px;
+    margin: 2px 2px;
+    width:50px 
+    
+}
+
+button {
+    margin: 20px 0;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+</style>
+    </head>
+    <body><h3 font-family="Brush Script MT">Calculator</h3>
+        <form><input type="number" id="num1-el"></input>
+        <input type="number" id="num2-el"></input></form>
+        <br>
+        <button onclick= add()>Add</button>
+        <button onclick= subtract()>Subtract</button>
+        <button onclick = divide()>Divide</button>
+        <button onclick= multiply()>Multiply</button>
+        <br>
+        <span id="sum-el">Sum: </span>
+        <script>let a
+// Create four functions: add(), subtract(), divide(), multiply()
+function add(){
+let num1=eval(document.getElementById("num1-el").value)
+let num2=eval(document.getElementById("num2-el").value)
+let sum=document.getElementById("sum-el")
+    sum.textContent=0
+    a=num1+num2
+    sum.textContent="Result: " + a
+}
+
+function subtract(){
+let num1=eval(document.getElementById("num1-el").value)
+let num2=eval(document.getElementById("num2-el").value)
+let sum=document.getElementById("sum-el")
+    sum.textContent=0
+    a=num1-num2
+    sum.textContent="Result: " + a
+}
+
+function divide(){
+let num1=eval(document.getElementById("num1-el").value)
+let num2=eval(document.getElementById("num2-el").value)
+let sum=document.getElementById("sum-el")
+    sum.textContent=0
+    a=num1/num2
+    sum.textContent="Result: " + a
+}
+
+function multiply(){
+let num1=eval(document.getElementById("num1-el").value)
+let num2=eval(document.getElementById("num2-el").value)
+let sum=document.getElementById("sum-el")
+    sum.textContent=0
+    a=num1*num2
+    sum.textContent="Result: " + a}</script>
+    </body>
+</html>
